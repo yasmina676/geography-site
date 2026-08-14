@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Обучающий сайт по географии</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("фон.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+}
+
+
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+
+
+h1{
+    text-align:center;
+
+    color:white;
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 20px rgba(255,255,255,0.5);
+}
+
+
+
+.card{
+    background:rgba(220,220,220,0.25);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:3px solid rgba(255,255,255,0.8);
+
+    border-radius:35px;
+
+    padding:35px;
+
+    transition:0.4s;
+}
+
+.card:hover{
+    border-color:#4caf50;
+
+    box-shadow:
+        0 0 20px #4caf50,
+        0 0 40px rgba(76,175,80,0.6);
+}
+
+h2{
+    text-align:center;
+
+    color:white;
+
+    font-size:32px;
+
+    margin-bottom:30px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.7);
+}
+
+
+
+.question{
+    background:rgba(255,255,255,0.10);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+}
+
+.question p{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+label{
+    display:block;
+
+    padding:8px 0;
+
+    cursor:pointer;
+}
+
+input[type="radio"]{
+    margin-right:10px;
+}
+
+
+
+input[type="text"],
+select{
+    width:100%;
+
+    padding:14px;
+
+    margin-top:10px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    background:rgba(255,255,255,0.25);
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+input[type="text"]:focus,
+select:focus{
+    border-color:#4caf50;
+
+    box-shadow:
+        0 0 10px rgba(76,175,80,0.7);
+}
+
+option{
+    color:black;
+    background:white;
+}
+
+
+
+button{
+    width:100%;
+
+    margin-top:25px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.2);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+    color:black;
+
+    transform:scale(1.02);
+}
+
+
+
+.timer{
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    background:rgba(255,255,255,0.25);
+
+    backdrop-filter:blur(8px);
+
+    border:2px solid white;
+
+    border-radius:15px;
+
+    padding:12px 22px;
+
+    color:white;
+
+    font-size:24px;
+    font-weight:bold;
+
+    z-index:1000;
+}
+
+
+
+.result{
+    margin-top:30px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.8);
+}
+
+</style>
+</head>
+<body>
+
+<div class="timer" id="timer">
+30:00
+</div>
+
+<div class="container">
+
+<h1>Обучающий сайт по дисциплине «География»</h1>
+
+<div class="card">
+
+<div class="card">
+
+<h2>Итоговый тест</h2>
+
+<form id="quiz">
+
+
+<div class="question">
+<p>1. Какая оболочка Земли включает земную кору и верхнюю мантию?</p>
+<label><input type="radio" name="q1" value="1"> Литосфера</label>
+<label><input type="radio" name="q1"> Гидросфера</label>
+<label><input type="radio" name="q1"> Атмосфера</label>
+<label><input type="radio" name="q1"> Биосфера</label>
+</div>
+
+<div class="question">
+<p>2. Что относится к гидросфере?</p>
+<label><input type="radio" name="q2"> Воздух</label>
+<label><input type="radio" name="q2" value="1"> Вода</label>
+<label><input type="radio" name="q2"> Почва</label>
+<label><input type="radio" name="q2"> Горные породы</label>
+</div>
+
+<div class="question">
+<p>3. Какой слой атмосферы является самым нижним?</p>
+<label><input type="radio" name="q3"> Стратосфера</label>
+<label><input type="radio" name="q3" value="1"> Тропосфера</label>
+<label><input type="radio" name="q3"> Мезосфера</label>
+<label><input type="radio" name="q3"> Термосфера</label>
+</div>
+
+<div class="question">
+<p>4. Где образуются облака?</p>
+<label><input type="radio" name="q4" value="1"> В тропосфере</label>
+<label><input type="radio" name="q4"> В литосфере</label>
+<label><input type="radio" name="q4"> В гидросфере</label>
+<label><input type="radio" name="q4"> В мезосфере</label>
+</div>
+
+<div class="question">
+<p>5. Какой прибор измеряет атмосферное давление?</p>
+<label><input type="radio" name="q5"> Термометр</label>
+<label><input type="radio" name="q5"> Флюгер</label>
+<label><input type="radio" name="q5" value="1"> Барометр</label>
+<label><input type="radio" name="q5"> Компас</label>
+</div>
+
+<div class="question">
+<p>6. Что показывают горизонтали на карте?</p>
+<label><input type="radio" name="q6"> Температуру</label>
+<label><input type="radio" name="q6" value="1"> Высоту местности</label>
+<label><input type="radio" name="q6"> Давление</label>
+<label><input type="radio" name="q6"> Осадки</label>
+</div>
+
+<div class="question">
+<p>7. Что такое азимут?</p>
+<label><input type="radio" name="q7"> Расстояние до объекта</label>
+<label><input type="radio" name="q7" value="1"> Угол между севером и объектом</label>
+<label><input type="radio" name="q7"> Высота объекта</label>
+<label><input type="radio" name="q7"> Скорость ветра</label>
+</div>
+
+<div class="question">
+<p>8. Какой океан самый большой?</p>
+<label><input type="radio" name="q8"> Атлантический</label>
+<label><input type="radio" name="q8"> Индийский</label>
+<label><input type="radio" name="q8" value="1"> Тихий</label>
+<label><input type="radio" name="q8"> Северный Ледовитый</label>
+</div>
+
+<div class="question">
+<p>9. Самое глубокое озеро мира?</p>
+<label><input type="radio" name="q9"> Виктория</label>
+<label><input type="radio" name="q9"> Ладожское</label>
+<label><input type="radio" name="q9" value="1"> Байкал</label>
+<label><input type="radio" name="q9"> Онежское</label>
+</div>
+
+<div class="question">
+<p>10. Какая река считается самой длинной?</p>
+<label><input type="radio" name="q10"> Нил</label>
+<label><input type="radio" name="q10" value="1"> Амазонка</label>
+<label><input type="radio" name="q10"> Волга</label>
+<label><input type="radio" name="q10"> Янцзы</label>
+</div>
+
+<div class="question">
+<p>11. Самый большой остров мира?</p>
+<label><input type="radio" name="q11"> Мадагаскар</label>
+<label><input type="radio" name="q11" value="1"> Гренландия</label>
+<label><input type="radio" name="q11"> Сахалин</label>
+<label><input type="radio" name="q11"> Калимантан</label>
+</div>
+
+<div class="question">
+<p>12. Какой материк считается самым сухим?</p>
+<label><input type="radio" name="q12"> Африка</label>
+<label><input type="radio" name="q12" value="1"> Австралия</label>
+<label><input type="radio" name="q12"> Евразия</label>
+<label><input type="radio" name="q12"> Южная Америка</label>
+</div>
+
+<div class="question">
+<p>13. Какая страна занимает целый материк?</p>
+<label><input type="radio" name="q13"> Россия</label>
+<label><input type="radio" name="q13"> Китай</label>
+<label><input type="radio" name="q13" value="1"> Австралия</label>
+<label><input type="radio" name="q13"> Индия</label>
+<div>
+
+
+<div class="question">
+<p>14. Самое солёное море?</p>
+<label><input type="radio" name="q14"> Чёрное</label>
+<label><input type="radio" name="q14"> Средиземное</label>
+<label><input type="radio" name="q14" value="1"> Красное</label>
+<label><input type="radio" name="q14"> Балтийское</label>
+</div>
+
+<div class="question">
+<p>15. В каком океане находится течение Гольфстрим?</p>
+<label><input type="radio" name="q15"> Тихом</label>
+<label><input type="radio" name="q15" value="1"> Атлантическом</label>
+<label><input type="radio" name="q15"> Индийском</label>
+<label><input type="radio" name="q15"> Северном Ледовитом</label>
+</div>
+
+<div class="question">
+<p>16. Самая большая страна мира?</p>
+<label><input type="radio" name="q16"> Канада</label>
+<label><input type="radio" name="q16"> Китай</label>
+<label><input type="radio" name="q16" value="1"> Россия</label>
+<label><input type="radio" name="q16"> США</label>
+</div>
+
+<div class="question">
+<p>17. Самый густонаселённый мегаполис мира?</p>
+<label><input type="radio" name="q17"> Москва</label>
+<label><input type="radio" name="q17"> Пекин</label>
+<label><input type="radio" name="q17" value="1"> Токио</label>
+<label><input type="radio" name="q17"> Сеул</label>
+</div>
+
+<div class="question">
+<p>18. Столица Австралии?</p>
+<label><input type="radio" name="q18"> Сидней</label>
+<label><input type="radio" name="q18"> Мельбурн</label>
+<label><input type="radio" name="q18" value="1"> Канберра</label>
+<label><input type="radio" name="q18"> Перт</label>
+</div>
+
+<div class="question">
+<p>19. Какие материки разделяет Берингов пролив?</p>
+<label><input type="radio" name="q19"> Африку и Азию</label>
+<label><input type="radio" name="q19" value="1"> Евразию и Северную Америку</label>
+<label><input type="radio" name="q19"> Европу и Азию</label>
+<label><input type="radio" name="q19"> Австралию и Азию</label>
+</div>
+
+<div class="question">
+<p>20. Как называется горячий источник, выбрасывающий воду и пар?</p>
+<label><input type="radio" name="q20"> Вулкан</label>
+<label><input type="radio" name="q20" value="1"> Гейзер</label>
+<label><input type="radio" name="q20"> Родник</label>
+<label><input type="radio" name="q20"> Кратер</label>
+</div>
+
+
+
+<div class="question">
+<p>21. Как называется древний суперконтинент?</p>
+<input type="text" id="q21">
+</div>
+
+<div class="question">
+<p>22. Самое глубокое озеро мира?</p>
+<input type="text" id="q22">
+</div>
+
+<div class="question">
+<p>23. Самый большой остров мира?</p>
+<input type="text" id="q23">
+</div>
+
+<div class="question">
+<p>24. Столица Австралии?</p>
+<input type="text" id="q24">
+</div>
+
+<div class="question">
+<p>25. Верхний плодородный слой земной коры называется...</p>
+<input type="text" id="q25">
+</div>
+
+
+
+<div class="question">
+<p>26. Тихий океан → ?</p>
+<select id="m1">
+<option></option>
+<option>Самый большой океан</option>
+<option>Самое глубокое озеро</option>
+<option>Самая длинная река</option>
+</select>
+</div>
+
+<div class="question">
+<p>27. Байкал → ?</p>
+<select id="m2">
+<option></option>
+<option>Самый большой остров</option>
+<option>Самое глубокое озеро</option>
+<option>Самое солёное море</option>
+</select>
+</div>
+
+<div class="question">
+<p>28. Амазонка → ?</p>
+<select id="m3">
+<option></option>
+<option>Самая длинная река</option>
+<option>Столица Австралии</option>
+<option>Течение</option>
+</select>
+</div>
+
+<div class="question">
+<p>29. Гренландия → ?</p>
+<select id="m4">
+<option></option>
+<option>Самый большой остров</option>
+<option>Самый сухой материк</option>
+<option>Суперконтинент</option>
+</select>
+</div>
+
+<div class="question">
+<p>30. Красное море → ?</p>
+<select id="m5">
+<option></option>
+<option>Самое солёное море</option>
+<option>Самая длинная река</option>
+<option>Самый большой океан</option>
+</select>
+</div>
+
+
+
+
+<button type="button" onclick="checkTest()">
+Завершить тест
+</button>
+
+</form>
+
+<div class="result" id="result"></div>
+
+</div>
+
+</div>
+
+<script>
+
+let time = 1800;
+let timerInterval;
+
+function updateTimer(){
+    let minutes = Math.floor(time/60);
+    let seconds = time%60;
+    document.getElementById("timer").textContent = 
+        minutes.toString().padStart(2,'0') + ":" + seconds.toString().padStart(2,'0');
+    
+    if(time > 0){
+        time--;
+    } else {
+        clearInterval(timerInterval);
+        checkTest();
+    }
+}
+
+timerInterval = setInterval(updateTimer, 1000);
+
+function checkTest(){
+clearInterval(timerInterval);
+let score=0;
+for(let i=1;i<=20;i++){
+let answer=document.querySelector('input[name="q'+i+'"]:checked');
+if(answer && answer.value=="1"){
+score++;
+}
+}
+if(document.getElementById("q21").value.trim().toLowerCase()=="пангея") score++;
+if(document.getElementById("q22").value.trim().toLowerCase()=="байкал") score++;
+if(document.getElementById("q23").value.trim().toLowerCase()=="гренландия") score++;
+if(document.getElementById("q24").value.trim().toLowerCase()=="канберра") score++;
+if(document.getElementById("q25").value.trim().toLowerCase()=="почва") score++;
+if(document.getElementById("m1").value=="Самый большой океан") score++;
+if(document.getElementById("m2").value=="Самое глубокое озеро") score++;
+if(document.getElementById("m3").value=="Самая длинная река") score++;
+if(document.getElementById("m4").value=="Самый большой остров") score++;
+if(document.getElementById("m5").value=="Самое солёное море") score++;
+let percent=Math.round(score/30*100);
+localStorage.setItem("testPercent", percent);
+localStorage.setItem("testScore", score);
+
+
+window.location.href = "result.html";
+
+document.getElementById("result.html").innerHTML = "Тест завершён! Ваш результат: " + score + " из 30 (" + percent + "%)";
+}
+</script>
+
+</body>
+</html>
+
+<label><inp

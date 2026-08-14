@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Главное меню</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("фон.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+
+
+h1{
+    text-align:center;
+    margin-top:30px;
+    font-size:48px;
+	color: white;
+    text-shadow:0 0 15px white;
+}
+
+
+.menu-container{
+    width:350px;
+    margin:50px auto;
+
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(8px);
+
+    border:2px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+
+
+#navbar{
+    list-style:none;
+}
+
+#navbar li{
+    margin:15px 0;
+}
+
+#navbar a{
+    display:block;
+    text-align:center;
+
+    padding:15px;
+
+    background:rgba(255,255,255,0.15);
+    color:white;
+
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
+
+    border-left:5px solid #22730c;
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+#navbar a:hover{
+    background:white;
+    color:black;
+    transform:scale(1.05);
+}
+
+
+.gallery{
+    width:90%;
+    margin:80px auto 40px auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+    border:3px solid rgba(255,255,255,0.2);
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #22c55e;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Главное меню</h1>
+
+<div class="menu-container">
+    <ul id="navbar">
+        <li><a href="теория.html">📚 Теория</a></li>
+        <li><a href="test.html">📝 Тестирование</a></li>
+    </ul>
+</div>
+
+<div class="gallery">
+    <img src="4.jpg" alt="15">
+    <img src="1.jpg" alt="15">
+    <img src="2.jpg" alt="15">
+    <img src="3.jpg" alt="15">
+</div>
+
+</body>
+</html>

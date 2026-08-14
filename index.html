@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Обучающий сайт по географии</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("фон.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    color:white;
+}
+
+
+
+h1{
+    margin-top:30px;
+
+    color:white;
+    font-size:38px;
+    font-weight:bold;
+
+    text-align:center;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.7),
+        0 0 15px rgba(255,255,255,0.5);
+}
+
+
+
+.start-container{
+    width:520px;
+    max-width:90%;
+
+    margin-top:50px;
+
+    background:rgba(220,220,220,0.35);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:3px solid rgba(255,255,255,0.8);
+
+    border-radius:35px;
+
+    padding:35px;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,0.4);
+
+    transition:0.4s;
+
+}
+start-container h2{
+    text-align:center;
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.7);
+}
+
+.start-container:hover{
+    transform:scale(1.02);
+
+    border-color:#4caf50;
+
+    box-shadow:
+        0 0 20px #2e7d32,
+        0 0 35px rgba(76,175,80,0.6);
+}
+
+
+
+.start-container h2{
+    text-align:center;
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.6),
+        0 0 15px rgba(255,255,255,0.3);
+}
+}
+
+
+
+label{
+    display:block;
+
+    margin-top:15px;
+    margin-bottom:8px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    color:white;
+}
+
+
+
+input,
+select{
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid rgba(255,255,255,0.35);
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.5);
+    backdrop-filter:blur(12px);
+
+    color:grey;
+
+    font-size:16px;
+
+    
+}
+option {
+color:black; 
+background: white;
+}
+
+input:focus,
+select:focus{
+    border:2px solid #4caf50;
+
+    box-shadow:
+        0 0 12px rgba(76,175,80,0.6);
+}
+
+
+
+.enter-btn{
+    display:block;
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    font-size:22px;
+    font-weight:bold;
+
+    color:white;
+
+    background:rgba(255,255,255,0.15);
+
+    border-left:5px solid #22730c;
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+.enter-btn:hover{
+    background:white;
+    color:black;
+
+    transform:scale(1.03);
+}
+
+
+
+.subtitle{
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#d0d0d0;
+
+    font-size:17px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>ОБУЧАЮЩИЙ САЙТ ПО ГЕОГРАФИИ</h1>
+
+<div class="start-container">
+
+<h2>Регистрация пользователя</h2>
+
+<label>Фамилия</label>
+<input type="text" placeholder="Введите фамилию">
+
+<label>Имя</label>
+<input type="text" placeholder="Введите имя">
+
+<label>Отчество</label>
+<input type="text" placeholder="Введите отчество">
+
+<label>Пол</label>
+<select>
+    <option>Выберите пол</option>
+    <option>Мужской</option>
+    <option>Женский</option>
+</select>
+
+<a href="menu (2).html" class="enter-btn">
+    Перейти в меню
+</a>
+
+</div>
+
+<div class="subtitle">
+    Добро пожаловать в систему обучения и тестирования
+</div>
+
+</body>
+</html>
